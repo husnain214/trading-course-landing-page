@@ -524,6 +524,10 @@ p {
     border: 3px solid var(--primary-color-2)
 }
 
+.designation {
+    font-style: italic;
+}
+
 .profile-content {
     font-size: 1.3rem;
 }
