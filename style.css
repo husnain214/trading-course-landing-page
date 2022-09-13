@@ -110,7 +110,7 @@ h1 {
 
 .creator-name {
     padding: 1em 0;
-    font-size: clamp(1.2rem, 5vw, 1.4rem);
+    font-size: clamp(1.2rem, 4vw, 1.4rem);
     font-style: italic;
 }
 
@@ -388,7 +388,7 @@ button svg > path {
 /* AUDIENCE SECTION */
 
 h2 {
-    font-size: clamp(1.5rem, 10vw, 3rem);
+    font-size: clamp(1.5rem, 5svw, 3rem);
     padding-bottom: 1em;
 }
 
@@ -823,6 +823,10 @@ footer p {
 }
 
 @media (max-width: 500px) {
+    h1, h2, h3, h4, h5 , h6 {
+        text-align: center;
+        width: 100%;
+    }
     .container {
         padding-top: 2em;
         padding-bottom: 2em; 
