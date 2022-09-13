@@ -350,9 +350,9 @@ h5 {
     transform: translateY(-50%);
 }
 
-/* #prev {
+#prev {
     display: none;
-} */
+}
 
 .slide {
     height: 600px;
