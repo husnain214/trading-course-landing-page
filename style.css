@@ -98,7 +98,7 @@ header {
 }
 
 .fixed-countdown {
-    transition: opacity .5s;
+    transition: opacity .3s;
 }
 
 h1 {
@@ -110,7 +110,7 @@ h1 {
 
 .creator-name {
     padding: 1em 0;
-    font-size: clamp(1.2rem, 4vw, 1.4rem);
+    font-size: clamp(1rem, 4vw, 1.4rem);
     font-style: italic;
 }
 
@@ -324,13 +324,17 @@ h5 {
     justify-content: flex-start;
 }
 
-button svg > path {
-    stroke: var(--primary-color-1);
+#prev img {
+    rotate: 270deg;
+}
+
+#next img {
+    rotate: 90deg;
 }
 
 #prev {
     top: 50%;
-    left: 1%;
+    left: 0%;
 }
 
 #next {
@@ -388,7 +392,7 @@ button svg > path {
 /* AUDIENCE SECTION */
 
 h2 {
-    font-size: clamp(1.5rem, 5svw, 3rem);
+    font-size: clamp(1.5rem, 5vw, 3rem);
     padding-bottom: 1em;
 }
 
@@ -503,25 +507,26 @@ p {
 
 .profile.flex {
     justify-content: space-between;
-    padding: 2em;
     background-color: #272727;
     border-top: 5px solid var(--primary-color-1);
     border-bottom: 5px solid var(--primary-color-2);
     border-radius: 10px;
     gap: 4em;
     margin-bottom: 2em;
+    padding: 2em;
 }
 
 .mentor-image {
     flex-shrink: 0;
-    flex-basis: 30%;
+    flex-basis: 25%;
     border-radius: 10px;
 }
 
 .mentor-image img {
     width: 100%;
     border-radius: 50%;
-    border: 3px solid var(--primary-color-2)
+    border: 3px solid var(--primary-color-2);
+    object-fit: cover;
 }
 
 .designation {
@@ -717,12 +722,13 @@ footer p {
 }
 
 .countdown-screen {
-    padding: 1em;
+    padding-inline: .5em;
     z-index: 9999;
     position: fixed;
     width: 100%;
     bottom: 0;
     display: none;
+    opacity: 0;
 }
 
 .countdown-screen::before {
@@ -755,6 +761,7 @@ footer p {
     grid-template-columns: repeat(7, 1fr);
     justify-items: center;
     align-items: center;
+    margin-inline: 2em;
 }
 
 .countdown-screen .countdown > * {
@@ -816,6 +823,10 @@ footer p {
         flex-wrap: wrap;
     }
 
+    .certification-section .container.flex {
+        gap: .1em;
+    }
+
     .mentor-image,
     .certification-section aside {
         flex-basis: 100%;
@@ -831,6 +842,12 @@ footer p {
         text-align: center;
         width: 100%;
     }
+
+    .profile.flex {
+        padding: 1em 2em;
+        gap: 1em;
+    }
+
     .container {
         padding-top: 2em;
         padding-bottom: 2em; 

@@ -16,7 +16,7 @@ let windowScrollY = window.scrollY
 let countDownTime = new Date ("Oct 5, 2022, 12:00:00")
 let countdownShowCounter = 0
 let imageWidth = sliderImage.width
-let sliderCounter = 1
+let sliderCounter = 0
 
 function updateTime () {
     let currentTime = new Date ().getTime()
@@ -50,24 +50,24 @@ function countdownShow () {
         fixedCountdown.style.opacity = "1"
     }
     
-    setTimeout (() => fixedCountdown.style.opacity = "0", 10000)
+    // setTimeout (() => fixedCountdown.style.opacity = "0", 10000)
 }
 
 document.addEventListener ("scroll", countdownShow)
 
 setInterval (renderTime, 1000)
-setTimeout (() => fixedCountdown.style.opacity = "0", 10000)
+// setTimeout (() => fixedCountdown.style.opacity = "0", 10000)
 
 nextBtn.addEventListener ("click", () => {
-    imageSlider.style.transition = `transform 0.4s ease-in-out`
+    imageSlider.style.transition = `translate 0.4s ease-in-out`
     sliderCounter++
-    imageSlider.style.transform = `translateX(${-imageWidth * sliderCounter}px)`
+    imageSlider.style.translate = `${-imageWidth * sliderCounter}px`
 })
 
 prevBtn.addEventListener ("click", () => {
-    imageSlider.style.transition = `transform 0.4s ease-in-out`
+    imageSlider.style.transition = `translate 0.4s ease-in-out`
     sliderCounter--
-    imageSlider.style.transform = `translateX(${-imageWidth * sliderCounter}px)`
+    imageSlider.style.translate = `${-imageWidth * sliderCounter}px`
 })
 
 imageSlider.addEventListener ("transitionend", () => {
