@@ -97,6 +97,10 @@ header {
     margin-inline: auto;
 }
 
+.fixed-countdown {
+    transition: opacity .5s;
+}
+
 h1 {
     font-size: clamp(2rem, 10vw, 2.5rem);
     line-height: 1.2em;
@@ -168,7 +172,7 @@ header .section span:nth-child(1) {
 }
 
 .main-btn {
-    font-size: clamp(.8rem, 5vw, 1.2rem)!important;
+    font-size: clamp(.8rem, 3vw, 1.2rem)!important;
     background-image: var(--light-gradient-bg);
     padding: 1em;
     border-radius: 5px;
@@ -298,6 +302,7 @@ h5 {
 
 .wrapper {
     gap: 5em;
+    position: relative;
 }
 
 .wrapper.flex p {
@@ -307,15 +312,43 @@ h5 {
 }
 
 .image-slider {
-    outline: 2px solid var(--primary-color-1);
-    overflow: auto;
-    display: flex;
     width: 483px;
-    scroll-behavior: smooth;
     overflow: hidden;
     border-radius: 20px;
+    outline: 2px solid var(--primary-color-1);
     order: 2;
 }
+
+.image-container {
+    transition: translate .5s ease;
+    justify-content: flex-start;
+}
+
+button svg > path {
+    stroke: var(--primary-color-1);
+}
+
+#prev {
+    top: 50%;
+    left: 1%;
+}
+
+#next {
+    right: 0;
+}
+
+#next, #prev {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    transform: translateY(-50%);
+}
+
+/* #prev {
+    display: none;
+} */
 
 .slide {
     height: 600px;
@@ -326,40 +359,6 @@ h5 {
     min-width: 483px;
     object-fit: fill;
 }
-
-.img-buttons {
-    flex-direction: column;
-    gap: 20px;
-}
-
-.img-id {
-    border-radius: 50%;
-    height: 20px;
-    width: 20px;
-    border: 2px solid var(--primary-color-1);
-    margin: 2em auto;
-    position: relative;
-}
-
-.highlight {
-    height: 95%;
-    width: 95%;
-    border-radius: 50%;
-    background-color: var(--primary-color-2);
-    margin: auto;
-    border: 1px solid black;
-    opacity: 0;
-    transition: all 200ms;
-}
-
-.img-id:hover .highlight {
-    opacity: 1;
-}
-
-.wrapper a {
-    height: 16px;
-}
-
 
 /* TESTIMONIALS SECTION */
 
@@ -406,14 +405,14 @@ h2 {
 
 .bullet {
     background-color: var(--primary-color-1);
-    width: 13px;
+    width: 1rem;
     flex-shrink: 0;
-    height: 13px;
+    height: 1rem;
     rotate: 45deg;
 }
 
 .customer {
-    font-size: clamp(1.05rem, 5vw, 1.5rem);
+    font-size: clamp(1rem, 4vw, 1.5rem);
     padding-bottom: 3px;
     border-bottom: 2px dashed var(--primary-color-1);
 }
@@ -474,10 +473,6 @@ p {
     font-size: clamp(2rem, 10vw, 7rem);
 }
 
-.second-countdown .number {
-    padding: 30px;
-}
-
 .second-countdown .number:nth-child(1) {
     padding-left: 0;
 }
@@ -488,6 +483,7 @@ p {
 
 .second-countdown .time-section .name {
     font-size: clamp(.7rem, 5vw, 1.2rem);
+    text-align: center;
 }
 
 .time-section.flex {
@@ -851,6 +847,8 @@ footer p {
 
     .customers-grid .section.flex {
         width: 90%;
+        padding: .7em;
+        border-width: 1px;
     }
 
     .bonus.flex,
@@ -878,15 +876,19 @@ footer p {
     }
 
     .image-slider {
-        max-width: 95vw;
-        min-height: 90vh;
-        
+        height: 80vh;
+        width: 70vw;
+    }
+
+    .bullet {
+        width: .7rem;
+        height: .7rem;
     }
 
     .image-slider img {
-        max-width: 95vw;
-        min-width: 95vw;
-        min-height: 100%;
+        max-width: 70vw;
+        min-width: 70vw;
+        min-height: 80vh;
     }
 
     .img-buttons.flex {
@@ -897,6 +899,10 @@ footer p {
         rotate: 0deg;
         margin-bottom: -70px;
         margin-right: 0;
+    }
+
+    .countdown-screen .countdown > * {
+        font-size: .7rem;
     }
 }
 

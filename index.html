@@ -9,39 +9,40 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>Document</title>
 </head>
 <body>
     <header>
         <section class="glow"></section>
 
-        <section class="countdown-screen">
+        <section class="countdown-screen fixed-countdown">
             <a href="#"><button class="main-btn">Pre-Register now for: ₹ 999<br> ( PAY THE REST ONLY IF YOU LIKE THE PROGRAM )</button></a>
 
             <div class="countdown">
                 <div class="time-section">
-                    <span class="number gradient-heading-bg">12</span>
+                    <span class="number gradient-heading-bg days">12</span>
                     <span class="name">Days</span>
                 </div>
     
                 <span class="colon gradient-heading-bg">:</span>
     
                 <div class="time-section">
-                    <span class="number gradient-heading-bg">12</span>
+                    <span class="number gradient-heading-bg hours">12</span>
                     <span class="name">Hours</span>                            
                 </div>
     
-                <span class="colon gradient-heading-bg">:</span>
+                <span class="colon gradient-heading-bg ">:</span>
     
                 <div class="time-section">
-                    <span class="number gradient-heading-bg">12</span>
+                    <span class="number gradient-heading-bg minutes">12</span>
                     <span class="name">Minutes</span>
                 </div>
     
                 <span class="colon gradient-heading-bg">:</span>
     
                 <div class="time-section">
-                    <span class="number gradient-heading-bg">12</span>
+                    <span class="number gradient-heading-bg seconds">12</span>
                     <p class="name">Seconds</p>
                 </div>
             </div>
@@ -93,28 +94,28 @@
     
                     <div class="countdown flex">
                         <div class="time-section">
-                            <span class="number gradient-heading-bg">12</span>
+                            <span class="number gradient-heading-bg days">12</span>
                             <span class="name">Days</span>
                         </div>
 
                         <span>:</span>
 
                         <div class="time-section">
-                            <span class="number gradient-heading-bg">12</span>
+                            <span class="number gradient-heading-bg hours">12</span>
                             <span class="name">Hours</span>                            
                         </div>
 
                         <span>:</span>
 
                         <div class="time-section">
-                            <span class="number gradient-heading-bg">12</span>
+                            <span class="number gradient-heading-bg minutes">12</span>
                             <span class="name">Minutes</span>
                         </div>
 
                         <span>:</span>
 
                         <div class="time-section">
-                            <span class="number gradient-heading-bg">12</span>
+                            <span class="number gradient-heading-bg seconds">12</span>
                             <span class="name">Seconds</span>
                         </div>
                     </div>
@@ -230,71 +231,33 @@
         <div class="container">
             <h2><span class="gradient-heading-bg">RESULTS</span> ACHIEVED BY OUR TRADERS</h2>
 
-        <div class="wrapper flex">
-            <p class="gradient-heading-bg">Click here</p>
+            <div class="wrapper flex">
+                <button class="prev" id="prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />
+                    </svg>                       
+                </button>
 
-            <div class="image-slider">
-                <div class="slide" id="img1"><img src="./images/Screenshot_2022_0816_155537.jpg" alt=""></div>
-                <div class="slide" id="img2"><img src="./images/Screenshot_2022_0816_155558.jpg" alt=""></div>
-                <div class="slide" id="img3"><img src="./images/Screenshot_2022_0816_160234.jpg" alt=""></div>
-                <div class="slide" id="img4"><img src="./images/Screenshot_2022_0816_160640.jpg" alt=""></div>
-                <div class="slide" id="img5"><img src="./images/Screenshot_2022_0816_161011.jpg" alt=""></div>
-                <div class="slide" id="img6"><img src="./images/Screenshot_2022_0816_184931.jpg" alt=""></div>
-                <div class="slide" id="img7"><img src="./images/Screenshot_2022_0817_192004.jpg" alt=""></div>
-                <div class="slide" id="img8"><img src="./images/Screenshot_2022_0817_192030.jpg" alt=""></div>
-                <div class="slide" id="img9"><img src="./images/Screenshot_2022_0818_114316.jpg" alt=""></div>
+                <div class="image-slider">
+                    <div class="image-container flex" id="image-container">
+                        <div class="slide" id="img1"><img src="./images/Screenshot_2022_0816_155537.jpg" alt=""></div>
+                        <div class="slide" id="img2"><img src="./images/Screenshot_2022_0816_155558.jpg" alt=""></div>
+                        <div class="slide" id="img3"><img src="./images/Screenshot_2022_0816_160234.jpg" alt=""></div>
+                        <div class="slide" id="img4"><img src="./images/Screenshot_2022_0816_160640.jpg" alt=""></div>
+                        <div class="slide" id="img5"><img src="./images/Screenshot_2022_0816_161011.jpg" alt=""></div>
+                        <div class="slide" id="img6"><img src="./images/Screenshot_2022_0816_184931.jpg" alt=""></div>
+                        <div class="slide" id="img7"><img src="./images/Screenshot_2022_0817_192004.jpg" alt=""></div>
+                        <div class="slide" id="img8"><img src="./images/Screenshot_2022_0817_192030.jpg" alt=""></div>
+                        <div class="slide" id="img9"><img src="./images/Screenshot_2022_0818_114316.jpg" alt=""></div>
+                    </div>
+                </div>
+
+                <button class="next" id="next">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                    </svg>                      
+                </button>
             </div>
-    
-            <div class="img-buttons flex">
-                <a href="#img1">
-                    <div class="img-id">
-                        <div class="highlight"></div>
-                    </div>
-                </a>
-                <a href="#img2">
-                    <div class="img-id">
-                        <div class="highlight"></div>
-                    </div>
-                </a>
-                <a href="#img3">
-                    <div class="img-id">
-                        <div class="highlight"></div>
-                    </div>
-                </a>
-                <a href="#img4">
-                    <div class="img-id">
-                        <div class="highlight"></div>
-                    </div>
-                </a>
-                <a href="#img5">
-                    <div class="img-id">
-                        <div class="highlight"></div>
-                    </div>
-                </a>
-                <a href="#img6">
-                    <div class="img-id">
-    
-                        <div class="highlight"></div>
-                    </div>
-                </a>
-                <a href="#img7">
-                    <div class="img-id">
-    
-                        <div class="highlight"></div>
-                    </div>
-                </a>
-                <a href="#img8">
-                    <div class="img-id">
-                        <div class="highlight"></div>
-                    </div>
-                </a>
-                <a href="#img9">
-                    <div class="img-id">
-                        <div class="highlight"></div>
-                    </div>
-                </a>
-            </div>
-        </div>
         </div>
     </section>
 
@@ -513,29 +476,29 @@
         <div class="container">
             <div class="border-gradient">
                 <div class="second-countdown countdown">
-                    <div class="time-section">
-                        <span class="number gradient-heading-bg">12</span>
+                    <div class="time-section flex">
+                        <span class="number gradient-heading-bg days">12</span>
                         <span class="name">Days</span>
                     </div>
         
                     <span class="colon gradient-heading-bg">:</span>
         
-                    <div class="time-section">
-                        <span class="number gradient-heading-bg">12</span>
+                    <div class="time-section flex">
+                        <span class="number gradient-heading-bg hours">12</span>
                         <span class="name">Hours</span>                            
                     </div>
         
                     <span class="colon gradient-heading-bg">:</span>
         
-                    <div class="time-section">
-                        <span class="number gradient-heading-bg">12</span>
+                    <div class="time-section flex">
+                        <span class="number gradient-heading-bg minutes">12</span>
                         <span class="name">Minutes</span>
                     </div>
         
                     <span class="colon gradient-heading-bg">:</span>
         
-                    <div class="time-section">
-                        <span class="number gradient-heading-bg">12</span>
+                    <div class="time-section flex">
+                        <span class="number gradient-heading-bg seconds">12</span>
                         <p class="name">Seconds</p>
                     </div>
                 </div>
