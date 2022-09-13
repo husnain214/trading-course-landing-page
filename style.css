@@ -100,6 +100,8 @@ header {
 h1 {
     font-size: clamp(2rem, 10vw, 2.5rem);
     line-height: 1.2em;
+    text-transform: capitalize;
+    width: 100%;
 }
 
 .creator-name {
@@ -119,12 +121,12 @@ h1 {
 }
 
 .section {
-    border-top: 3px solid var(--primary-color-1);
+    border: 3px solid var(--primary-color-1);
     width: 100%;
     padding: 1em 0em 1em 1.2em;
     border-radius: 5px;
     margin-bottom: 1em;
-    background-color: #272727;
+    background-image: var(--dark-gradient-bg);
 }
 
 .section span {
@@ -262,8 +264,10 @@ header .section span:nth-child(1) {
     align-items: stretch;
     border-radius: 20px 2px;
     margin-bottom: 2em;
-    border-right: 5px solid var(--primary-color-1);
-    border-left: 5px solid var(--primary-color-2);
+    border-right: 3px solid var(--primary-color-1);
+    border-left: 3px solid var(--primary-color-2);
+    border-top: 3px solid var(--primary-color-1);
+    border-bottom: 3px solid var(--primary-color-2);
 }
 
 h5 {
@@ -272,7 +276,6 @@ h5 {
 }
 
 .service-box p {
-    font-size: 1.2rem;
     font-size: clamp(1rem, 3vw, 1.2rem);
     line-height: 1.2em;
 }
@@ -361,7 +364,7 @@ h5 {
 /* TESTIMONIALS SECTION */
 
 .card {
-    border-radius: 2%;
+    border-radius: 15px;
     overflow: hidden;
     margin-bottom: 2em;
 }
@@ -374,43 +377,13 @@ h5 {
     height: 100%;
     width: 100%;
     object-fit: fill;
+    border-radius: 15px;
+    border: 2px solid var(--primary-color-1)
 }
 
 .card-img video {
     max-height: 100%;
     max-width: 100%;
-}
-
-.card-content {
-    padding: 1em;
-    position: relative;
-    background-color: #272727;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom: 5px solid var(--primary-color-1);
-    border-top: 5px solid var(--primary-color-2);
-}
-
-.card-content h4 {
-    font-size: 1.5rem;
-    font-weight: var(--fw-bold);
-    padding-bottom: 1em;
-}
-
-.card-content p {
-    font-size: 1.2rem;
-}
-
-.quote {
-    background-color: black;
-    padding: 10px;
-    height: 3em;
-    width: 3em;
-    border-radius: 50%;
-    overflow: hidden;
-    position: absolute;
-    top: -20px;
-    right: 20px;
 }
 
 /* AUDIENCE SECTION */
@@ -440,7 +413,7 @@ h2 {
 }
 
 .customer {
-    font-size: 1.5rem;
+    font-size: clamp(1.05rem, 5vw, 1.5rem);
     padding-bottom: 3px;
     border-bottom: 2px dashed var(--primary-color-1);
 }
@@ -451,28 +424,29 @@ h2 {
     background-image: var(--dark-gradient-bg);
     border-radius: 10px;
     padding: 2em 1em;
-    border-right: 2px dashed var(--primary-color-1);
-    border-left: 2px dashed var(--primary-color-2);
+    border: 2px dashed var(--primary-color-1);
     gap: 1em;
     margin-bottom: 1em;
 }
 
 .bonus-right {
     flex-direction: column;
-    font-size: 1.1rem;
     gap: 1em;
 }
 
 .bonus-right span:nth-child(1) {
     color: rgb(126, 122, 122);
+    font-size: clamp(.8rem, 3vw, 2rem);
 }
 
 .bonus-right span:nth-child(2) {
     font-size: 2rem;
+    font-size: clamp(1em, 5vw, 2rem);
 }
 
 .bonus-right span:nth-child(3) {
     font-size: 2rem;
+    font-size: clamp(1.1em, 5vw, 2rem);
 }
 
 p {
@@ -550,7 +524,8 @@ p {
 
 .mentor-image img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color-2)
 }
 
 .profile-content {
@@ -560,6 +535,7 @@ p {
 .profile-content p {
     padding-bottom: .7em;
     line-height: 1.3em;
+    font-size: clamp(.8rem ,5vw ,1rem);
 }
 
 /* CERTIFICATION SECTION */
@@ -606,8 +582,10 @@ main li span {
 
 .offer.flex,
 .bonus.flex {
-    border-right: 1px solid var(--primary-color-2);
+    border-right: 1px solid var(--primary-color-2) !important;
     border-left: 1px solid var(--primary-color-1);
+    border-top: 1px solid var(--primary-color-2);
+    border-bottom: 1px solid var(--primary-color-1);
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.562);
     justify-content: flex-start;
@@ -630,7 +608,7 @@ main li span {
 
 .offer main span:nth-child(1),
 .bonus main span:nth-child(1) {
-    font-size: 1.7rem;
+    font-size: clamp(1.3rem, 5vw, 1.7rem);
 }
 
 .bonus main span:nth-child(1) {
@@ -649,11 +627,12 @@ main li span {
 
 .bonus aside span:nth-child(1) {
     color: #6d6b6b;
+    font-size: clamp(.7rem, 4vw, 1rem);
     font-weight: var(--fw-bold);
 }
 
 .bonus aside span:nth-child(2) {
-    font-size: 2rem;
+    font-size: clamp(1rem, 5vw, 2rem);
 }
 
 .bonus {
@@ -671,10 +650,11 @@ main li span {
 
 .span-div span {
     display: block;
+    font-size: clamp(.8rem, 5vw, 1.5rem);
 }
 
 .span-div span:nth-child(2) {
-    font-size: 2rem;
+    font-size: clamp(1rem, 5vw, 2rem);
 }
 
 .tagline {
@@ -699,7 +679,7 @@ label.flex {
 
 .question {
     cursor: pointer;
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 5vw, 1.3rem);
 }
 
 .answer {
@@ -847,6 +827,11 @@ footer p {
 }
 
 @media (max-width: 500px) {
+    .container {
+        padding-top: 2em;
+        padding-bottom: 2em; 
+    }
+
     .hero-video {
         display: block;
     }
@@ -862,6 +847,10 @@ footer p {
     .customers-grid {
         display: grid;
         grid-template-columns: 1fr;
+    }
+
+    .customers-grid .section.flex {
+        width: 90%;
     }
 
     .bonus.flex,
@@ -882,6 +871,10 @@ footer p {
     .wrapper.flex {
         flex-direction: column;
         margin-inline: auto;
+    }
+
+    .span-div span {
+        margin-bottom: 1em;
     }
 
     .image-slider {
