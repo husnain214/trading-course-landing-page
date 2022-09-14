@@ -6,10 +6,10 @@
     --dark-gradient-bg: linear-gradient(145deg, rgba(0, 242, 96, 0.2) 0%, rgba(5, 117, 230, 0.2) 100%);
     --main-color: #ffffff;
     --ff-body: "Raleway";
+    --fw-bolder: 800;
     --fw-bold: 600;
     --fw-light: 400;
 }
-
 
 *,
 *::before,
@@ -29,8 +29,18 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: var(--fw-bold);
+    font-weight: var(--fw-bolder);
     width: fit-content;
+    text-shadow: 2px 4px 3px rgba(56, 54, 54, 0.459);
+}
+
+h1 span,
+h2 span, 
+h3 span, 
+h4 span, 
+h5 span, 
+h6 span {
+    font-weight: 800 !important;
 }
 
 ul {
@@ -155,7 +165,6 @@ header .section span:nth-child(1) {
 .hero-video {
     width: 100%;
     display: none;
-    background-color: red;
     margin-top: 1em;
     border-radius: 2%;
     overflow: hidden;
@@ -334,11 +343,11 @@ h5 {
 
 #prev {
     top: 50%;
-    left: 0%;
+    left: -5%;
 }
 
 #next {
-    right: 0;
+    right: -5%;
 }
 
 #next, #prev {
@@ -900,9 +909,17 @@ footer p {
         margin-bottom: 1em;
     }
 
+    .certification-section aside {
+        margin-top: -5em;
+    }
+
+    .certification-section .container.flex {
+        align-items: center;
+    }
+
     .image-slider {
-        height: 80vh;
-        width: 70vw;
+        height: 60vh;
+        width: 80vw;
     }
 
     .bullet {
@@ -911,9 +928,9 @@ footer p {
     }
 
     .image-slider img {
-        max-width: 70vw;
-        min-width: 70vw;
-        min-height: 80vh;
+        max-width: 80vw;
+        min-width: 80vw;
+        min-height: 60vh;
     }
 
     .img-buttons.flex {
