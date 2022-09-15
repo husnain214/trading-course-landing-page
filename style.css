@@ -864,10 +864,6 @@ footer p {
         object-fit: contain;
     }
 
-    .mentor-image img{
-        max-height: 213px;
-    }
-
     .customers-grid {
         gap: 0;
     }
