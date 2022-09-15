@@ -917,6 +917,10 @@ footer p {
     .countdown-screen .countdown > * {
         font-size: .7rem;
     }
+
+    .countdown .name {
+        margin-bottom: 0;
+    }
 }
 
 
