@@ -31,7 +31,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-weight: var(--fw-bolder);
     width: fit-content;
-    text-shadow: 2px 4px 3px rgba(56, 54, 54, 0.459);
+    text-shadow: 2px 3px 5px rgba(177, 170, 170, 0.3);
 }
 
 h1 span,
@@ -114,8 +114,9 @@ header {
 h1 {
     font-size: clamp(2rem, 10vw, 2.5rem);
     line-height: 1.2em;
-    text-transform: capitalize;
+    text-transform: uppercase;
     width: 100%;
+    font-family: "Montserrat", sans-serif;
 }
 
 .creator-name {
@@ -168,6 +169,12 @@ header .section span:nth-child(1) {
     margin-top: 1em;
     border-radius: 2%;
     overflow: hidden;
+}
+
+.bold ~ .gradient-heading-bg {
+    padding-top: 1em;
+    background-image: none;
+    color: white;
 }
 
 .hero-video video {
@@ -226,47 +233,25 @@ header .section span:nth-child(1) {
 
 .featured-image {
     height: 40px;
-    border-radius: 5px;
+    border-radius: 5px;   
     overflow: hidden;
+}
+
+.featured-image.white {
+    background-color: white;
+}
+
+.featured-image img {
+    border-radius: 5px;
 }
 
 .hero-image {
-    background-color: white;
     position: relative;
     border-radius: 20px;
+    display: flex;
+    justify-content: center;
     overflow: hidden;
-}
-
-.hero-image img {
-    object-fit: cover;
-    aspect-ratio: 20/9;
-    position: relative;
-}
-
-.play-btn {
-    position: absolute;
-    top: 50%;
-    bottom: 0;
-    left: 50%;
-    right: 0;
-    transform: translate(-50%, -50%);
-    background-color: gray;
-    border-radius: 50%;
-    padding: 1em;
-    height: 100px;
-    width: 100px;
-    transition: scale .5s;
-}
-
-.play-btn:hover, 
-.play-btn:focus {
-    scale: 1.05;
-}
-
-.play-btn svg {
-    height: 50px;
-    fill: white;
-}
+}++
 
 /* SERVICE SECTION */
 
@@ -857,9 +842,29 @@ footer p {
         gap: 1em;
     }
 
+    .audience-section .container {
+        padding-top: 0;
+    }
+
     .container {
         padding-top: 2em;
-        padding-bottom: 2em; 
+        padding-bottom: 0; 
+    }
+
+    .featured-row.flex {
+        flex-wrap: wrap;
+    }    
+
+    .featured-image img {
+        object-fit: contain;
+    }
+
+    .customers-grid {
+        gap: 0;
+    }
+
+    .hero-info {
+        padding-bottom: 0;
     }
 
     .hero-video {
@@ -900,6 +905,10 @@ footer p {
         display: block;
     }
 
+    .bonus-div {
+        padding: 1em;
+    }
+
     .wrapper.flex {
         flex-direction: column;
         margin-inline: auto;
@@ -909,12 +918,24 @@ footer p {
         margin-bottom: 1em;
     }
 
+    .offers-section .container {
+        padding: 1em 2em 2em 2em;
+    }
+
+    .bonus.flex aside.flex {
+        flex-direction: row;
+    }
+
     .certification-section aside {
-        margin-top: -5em;
+        
+        margin-bottom: 1em;
     }
 
     .certification-section .container.flex {
-        align-items: center;
+        align-items: start;
+        padding: 0;
+        min-height: fit-content;
+        gap: 2em;
     }
 
     .image-slider {
