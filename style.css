@@ -229,6 +229,7 @@ header .section span:nth-child(1) {
 
 .featured-row {
     justify-content: flex-start;
+    display: flex;
     gap: 1em;
     margin-top: 1em;
 }
