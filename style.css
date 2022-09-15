@@ -909,30 +909,9 @@ footer p {
         gap: 2em;
     }
 
-    .image-slider {
-        height: 60vh;
-        width: 80vw;
-    }
-
     .bullet {
         width: .7rem;
         height: .7rem;
-    }
-
-    .image-slider img {
-        max-width: 80vw;
-        min-width: 80vw;
-        min-height: 60vh;
-    }
-
-    .img-buttons.flex {
-        flex-flow: row wrap;
-    }
-
-    .wrapper.flex p {
-        rotate: 0deg;
-        margin-bottom: -70px;
-        margin-right: 0;
     }
 
     .countdown-screen .countdown > * {

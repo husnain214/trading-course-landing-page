@@ -3,20 +3,10 @@ const hoursEl = document.querySelectorAll (".hours")
 const minutesEl = document.querySelectorAll (".minutes") 
 const secondsEl = document.querySelectorAll (".seconds") 
 const fixedCountdown = document.querySelector (".fixed-countdown")
-const imageSlider = document.querySelector ("#image-container")
-const sliderImage = document.querySelector (".image-container img")
-
-
-// IMAGE SLIDER BUTTONS
-
-const prevBtn = document.querySelector ("#prev")
-const nextBtn = document.querySelector ("#next")
 
 let windowScrollY = window.scrollY
 let countDownTime = new Date ("Oct 5, 2022, 12:00:00")
 let countdownShowCounter = 0
-let imageWidth = sliderImage.width
-let sliderCounter = 0
 
 function updateTime () {
     let currentTime = new Date ().getTime()
@@ -49,28 +39,9 @@ function countdownShow () {
     else  {
         fixedCountdown.style.opacity = "1"
     }
-    
-    // setTimeout (() => fixedCountdown.style.opacity = "0", 10000)
 }
 
 document.addEventListener ("scroll", countdownShow)
 
 setInterval (renderTime, 1000)
-// setTimeout (() => fixedCountdown.style.opacity = "0", 10000)
 
-nextBtn.addEventListener ("click", () => {
-    imageSlider.style.transition = `translate 0.4s ease-in-out`
-    sliderCounter++
-    imageSlider.style.translate = `${-imageWidth * sliderCounter}px`
-})
-
-prevBtn.addEventListener ("click", () => {
-    imageSlider.style.transition = `translate 0.4s ease-in-out`
-    sliderCounter--
-    imageSlider.style.translate = `${-imageWidth * sliderCounter}px`
-})
-
-imageSlider.addEventListener ("transitionend", () => {
-    (sliderCounter > 0) ? prevBtn.style.display = "block" : prevBtn.style.display = "none";
-    (sliderCounter === 8) ? nextBtn.style.display = "none" : nextBtn.style.display = "block";
-})
