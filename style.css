@@ -313,57 +313,10 @@ h5 {
     margin-right: -90px;
 }
 
-.image-slider {
-    width: 483px;
-    overflow: hidden;
-    border-radius: 20px;
-    outline: 2px solid var(--primary-color-1);
-    order: 2;
-}
-
-.image-container {
-    transition: translate .5s ease;
-    justify-content: flex-start;
-}
-
-#prev img {
-    rotate: 270deg;
-}
-
-#next img {
-    rotate: 90deg;
-}
-
-#prev {
-    top: 50%;
-    left: -5%;
-}
-
-#next {
-    right: -5%;
-}
-
-#next, #prev {
-    height: 40px;
-    width: 40px;
-    position: absolute;
-    top: 50%;
-    bottom: 0;
-    transform: translateY(-50%);
-}
-
-#prev {
-    display: none;
-}
-
-.slide {
-    height: 600px;
-} 
-
-.slide img {
-    max-width: 483px;
-    min-width: 483px;
-    object-fit: fill;
+#carouselExampleIndicators {
+    max-width: 20em;
+    width: 100%;
+    margin-inline: auto;
 }
 
 /* TESTIMONIALS SECTION */
