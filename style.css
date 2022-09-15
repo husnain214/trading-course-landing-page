@@ -249,9 +249,14 @@ header .section span:nth-child(1) {
     position: relative;
     border-radius: 20px;
     display: flex;
+    max-height: 100vh;
     justify-content: center;
     overflow: hidden;
-}++
+}
+
+.hero-image video {
+    border-radius: 20px;
+}
 
 /* SERVICE SECTION */
 
