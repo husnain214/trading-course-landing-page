@@ -29,7 +29,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: var(--fw-bolder);
+    font-weight: var(--fw-bold);
     width: fit-content;
     text-shadow: 2px 3px 5px rgba(177, 170, 170, 0.3);
 }
@@ -112,11 +112,13 @@ header {
 }
 
 h1 {
+    
     font-size: clamp(2rem, 10vw, 2.5rem);
     line-height: 1.2em;
     text-transform: uppercase;
     width: 100%;
-    font-family: "Montserrat", sans-serif;
+    text-shadow: 2px 3px 5px rgba(177, 170, 170, 0.5);
+    text-align: left !important;
 }
 
 .creator-name {
@@ -432,7 +434,7 @@ h2 {
 }
 
 .bonus-right {
-    flex-direction: column;
+    /* flex-direction: column; */
     gap: 1em;
 }
 
@@ -470,6 +472,7 @@ p {
     display: grid;
     grid-template-columns: 1fr max-content 1fr max-content 1fr max-content 1fr;
     overflow: hidden;
+    align-items: end;
 }
 
 .second-countdown span {
@@ -485,7 +488,7 @@ p {
 }
 
 .second-countdown .time-section .name {
-    font-size: clamp(.7rem, 5vw, 1.2rem);
+    font-size: clamp(.7rem, 4vw, 1.2rem);
     text-align: center;
 }
 
@@ -856,8 +859,10 @@ footer p {
         padding-bottom: 0; 
     }
 
-    .featured-row.flex {
-        flex-wrap: wrap;
+    .featured-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 0.8em;
     }    
 
     .featured-image img {
@@ -881,7 +886,7 @@ footer p {
     }
 
     h1 {
-        font-size: calc(1.375rem + 1.5vw);
+        font-size: calc(1.6rem + 1.5vw);
     }
 
     .customers-grid {
@@ -925,6 +930,13 @@ footer p {
 
     .offers-section .container {
         padding: 1em 2em 2em 2em;
+    }
+    .bonuses-section h2 {
+        font-size: 1.2rem;
+    }
+
+    .offers-section .container h2 {
+        font-size: 1.4rem;
     }
 
     .bonus.flex aside.flex {
