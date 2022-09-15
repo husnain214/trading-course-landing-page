@@ -322,17 +322,17 @@ h5 {
 
 /* TESTIMONIALS SECTION */
 
-.card {
+.card-custom-custom {
     border-radius: 15px;
     overflow: hidden;
     margin-bottom: 2em;
 }
 
-.card-img {
+.card-custom-custom-img {
     height: 70%;
 }
 
-.card-img img {
+.card-custom-custom-img img {
     height: 100%;
     width: 100%;
     object-fit: fill;
@@ -340,7 +340,7 @@ h5 {
     border: 2px solid var(--primary-color-1)
 }
 
-.card-img video {
+.card-custom-custom-img video {
     max-height: 100%;
     max-width: 100%;
 }
@@ -741,20 +741,20 @@ footer p {
     }
 
     .customers-grid,
-    .card-grid {
+    .card-custom-custom-grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
 
-    .card-img {
+    .card-custom-custom-img {
         height: auto;
     }
 
-    .card-grid {
+    .card-custom-custom-grid {
         gap: 2em; 
     }
 
-    .card {
+    .card-custom-custom {
         margin-bottom: 0;
     }
 }
